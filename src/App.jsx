@@ -29,6 +29,10 @@ const App = () => {
       setCount(count - 1000);
     }
   }
+  const reset = () =>{
+    setMultiplier(1);
+    setCount(count - count);
+  }
 
   return (
     <div className="App">
@@ -52,6 +56,11 @@ const App = () => {
           <h3>Full Feast 👩🏽‍🍳</h3>
           <p>10x per click</p>
           <button onClick={buyFullFeast}>1000 samosas</button>
+        </div>
+        <div className="upgrade">
+          <h3>Reset</h3>
+          <p>Back to Square One 😨</p>
+          <button onClick={reset}>Demolish Samosas</button>
         </div>
       </div>
     </div>
